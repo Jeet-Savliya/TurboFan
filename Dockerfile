@@ -23,10 +23,9 @@ RUN pip3 install -r requirements.txt --break-system-packages
 # The backend will need to know where the models are now
 ENV PROJECT_ROOT=/app/PROJECT-1
 
-# Important: Start Express server on Render's designated port (it defaults to 10000 but we can expose 5000)
-# We will use PORT env var to let Render override it easily
-ENV PORT=10000
-EXPOSE 10000
+# Important: Start Express server on Hugging Face's designated port (7860)
+ENV PORT=7860
+EXPOSE 7860
 
 # Start Express server
 CMD ["node", "server.js"]
