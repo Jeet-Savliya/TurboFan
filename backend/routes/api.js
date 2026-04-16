@@ -4,8 +4,14 @@ const { spawn } = require("child_process");
 const path = require("path");
 const fs   = require("fs");
 
-// ── Get project root from config.json ────────────────────────────────────────
+// ── Get project root from config.json or Environment ───────────────────────────
 function getProjectRoot() {
+  // First, check for environment variable (Cloud Deployments)
+  if (process.env.PROJECT_ROOT) {
+    return process.env.PROJECT_ROOT;
+  }
+
+  // Otherwise, fallback to config.json (Local Development)
   try {
     const cfgPath = path.join(__dirname, "../config.json");
     const cfg = JSON.parse(fs.readFileSync(cfgPath, "utf8"));
