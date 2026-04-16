@@ -1,0 +1,20 @@
+{
+  "PROJECT_ROOT": "C:/Users/ADMIN/OneDrive/Desktop/rul-dashboard/PROJECT-1",
+
+  "_instructions": [
+    "Set PROJECT_ROOT to the FULL absolute path of your PROJECT-1 folder.",
+    "The PROJECT-1 folder must contain these two sub-folders: APP\\ and DATASETS\\",
+    "",
+    "Windows examples:",
+    "  C:\\Users\\ADMIN\\OneDrive\\Desktop\\PROJECT-1",
+    "  C:\\Users\\ADMIN\\Documents\\PROJECT-1",
+    "",
+    "Mac/Linux examples:",
+    "  /Users/yourname/Desktop/PROJECT-1",
+    "  /home/yourname/PROJECT-1",
+    "",
+    "Use FORWARD SLASHES (/) even on Windows — both work in Node.js",
+    "  GOOD: C:/Users/ADMIN/OneDrive/Desktop/PROJECT-1",
+    "  BAD:  C:\\Users\\ADMIN\\OneDrive\\Desktop\\PROJECT-1  (backslashes can cause issues)"
+  ]
+}
