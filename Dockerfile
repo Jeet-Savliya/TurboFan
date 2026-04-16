@@ -18,7 +18,7 @@ WORKDIR /app/backend
 RUN npm install
 
 # Install python dependencies
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r requirements.txt --break-system-packages
 
 # The backend will need to know where the models are now
 ENV PROJECT_ROOT=/app/PROJECT-1
