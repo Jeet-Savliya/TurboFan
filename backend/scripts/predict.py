@@ -74,6 +74,9 @@ def main():
         die(f"Engine #{args.engine_id} not found in {args.dataset}  "
             f"(valid: 1–{int(df['id'].max())})")
 
+    # Cast to float to avoid pandas strict casting TypeErrors
+    engine_df[sensor_cols] = engine_df[sensor_cols].astype("float64")
+
     # ── Per-condition scaling (pandas-3.x safe: scale in-place via .loc) ─────
     for _, idx in engine_df.groupby(setting_cols).groups.items():
         scaler = StandardScaler()
